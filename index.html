@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwa Medura Kalawewa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .section {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-width: 250px;
+        }
+
+        .section h2 {
+            color: #2C3E50;
+        }
+
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #3498DB;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Suwa Medura Kalawewa</h1>
+        <img src="your-medical-logo.png" alt="Suwa Medura Logo" style="width: 150px; height: auto;">
+    </header>
+
+    <div class="main-content">
+        <div class="section">
+            <h2>About Us</h2>
+            <p>Suwa Medura Kalawewa is a private medical center providing healthcare services in Kalawewa. We are open every day without holidays, from 6:45 AM to 7:45 AM in the morning and 6:00 PM to 10:00 PM in the evening. We provide a wide range of medical services including general practice, minor surgeries, and laboratory tests.</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact Details</h2>
+            <ul class="contact-info">
+                <li><strong>Phone Number:</strong> 0704327291</li>
+                <li><strong>Email:</strong> anumedst@gmail.com</li>
+                <li><strong>Location:</strong> Kalawewa, Sri Lanka</li>
+                <li><strong>Opening Hours:</strong> 6:45 AM - 7:45 AM (Morning), 6:00 PM - 10:00 PM (Evening)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Our Services</h2>
+            <p>We offer a wide variety of healthcare services to meet your needs, including:</p>
+            <ul>
+                <li>General Consultations</li>
+                <li>Minor Surgery Procedures</li>
+                <li>Laboratory Tests</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Book an Appointment</h2>
+            <form action="/book-appointment" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" name="contact" required><br><br>
+
+                <label for="date">Preferred Appointment Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="time">Preferred Appointment Time:</label>
+                <input type="time" id="time" name="time" required><br><br>
+
+                <button type="submit">Submit Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Suwa Medura Kalawewa | <a href="mailto:anumedst@gmail.com">Email Us</a> | Phone: 0704327291</p>
+    </footer>
+
+</body>
+</html>
