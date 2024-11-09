@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suwa Medura Kalawewa</title>
     <style>
+        /* Base styles for body */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
@@ -24,12 +25,15 @@
             margin: 0;
         }
 
+        /* Main content style */
         .main-content {
             display: flex;
             flex-wrap: wrap;
             padding: 20px;
+            justify-content: space-around;
         }
 
+        /* Style for each section */
         .section {
             flex: 1;
             margin: 10px;
@@ -53,19 +57,44 @@
             margin-bottom: 10px;
         }
 
+        /* Footer style */
         footer {
             background-color: #2C3E50;
             color: white;
             padding: 15px;
             text-align: center;
-            position: absolute;
+            position: relative;
             width: 100%;
-            bottom: 0;
         }
 
         footer a {
             color: #3498DB;
             text-decoration: none;
+        }
+
+        /* Responsive design for mobile screens */
+        @media screen and (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Stack sections vertically on smaller screens */
+                align-items: center;
+            }
+
+            .section {
+                width: 100%; /* Full width for each section on small screens */
+                margin-bottom: 15px;
+            }
+
+            header h1 {
+                font-size: 28px; /* Smaller font size for better readability on mobile */
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 14px; /* Smaller footer text for mobile */
+            }
         }
     </style>
 </head>
@@ -128,3 +157,4 @@
 
 </body>
 </html>
+
