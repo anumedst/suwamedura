@@ -8,21 +8,37 @@
         /* Base styles for body */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #eaf7ff;
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
+        /* Header style */
         header {
-            background-color: #2C3E50;
-            color: white;
+            background-color: #6a1b9a;
+            color: #fff;
             padding: 20px;
             text-align: center;
+            border-bottom: 4px solid #d500f9;
         }
 
         h1 {
             font-size: 36px;
             margin: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        /* Link to other page in header */
+        .header-link {
+            display: block;
+            color: #ffe082;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 10px;
         }
 
         /* Main content style */
@@ -36,16 +52,17 @@
         /* Style for each section */
         .section {
             flex: 1;
-            margin: 10px;
+            margin: 15px;
             padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             min-width: 250px;
+            border-top: 5px solid #00c853;
         }
 
         .section h2 {
-            color: #2C3E50;
+            color: #00897b;
         }
 
         .contact-info {
@@ -57,9 +74,20 @@
             margin-bottom: 10px;
         }
 
+        /* Button style for link within content */
+        .section-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #6a1b9a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
         /* Footer style */
         footer {
-            background-color: #2C3E50;
+            background-color: #00897b;
             color: white;
             padding: 15px;
             text-align: center;
@@ -68,24 +96,24 @@
         }
 
         footer a {
-            color: #3498DB;
+            color: #e1bee7;
             text-decoration: none;
         }
 
         /* Responsive design for mobile screens */
         @media screen and (max-width: 768px) {
             .main-content {
-                flex-direction: column; /* Stack sections vertically on smaller screens */
+                flex-direction: column;
                 align-items: center;
             }
 
             .section {
-                width: 100%; /* Full width for each section on small screens */
+                width: 100%;
                 margin-bottom: 15px;
             }
 
             header h1 {
-                font-size: 28px; /* Smaller font size for better readability on mobile */
+                font-size: 28px;
             }
 
             .section h2 {
@@ -93,7 +121,7 @@
             }
 
             footer {
-                font-size: 14px; /* Smaller footer text for mobile */
+                font-size: 14px;
             }
         }
     </style>
@@ -102,13 +130,22 @@
 
     <header>
         <h1>Suwa Medura Kalawewa</h1>
-        <img src="your-medical-logo.png" alt="Suwa Medura Logo" style="width: 150px; height: auto;">
+        <p>We are 2017 January onward</p>
+        <a href="services.html" class="header-link">Learn More About Our Services</a> <!-- Link in header -->
     </header>
 
     <div class="main-content">
         <div class="section">
             <h2>About Us</h2>
-            <p>Suwa Medura Kalawewa is a private medical center providing healthcare services in Kalawewa. We are open every day without holidays, from 6:45 AM to 7:45 AM in the morning and 6:00 PM to 10:00 PM in the evening. We provide a wide range of medical services including general practice, minor surgeries, and laboratory tests.</p>
+            <ul>
+                <li>Suwa Medura Kalawewa is a private medical center located in Kalawewa.</li>
+                <li>We provide comprehensive healthcare services for our community.</li>
+                <li>Our center operates every day, including holidays.</li>
+                <li>Our hours are 6:45 AM - 7:45 AM in the morning and 6:00 PM - 10:00 PM in the evening.</li>
+                <li>We offer general medical services, minor surgeries, and laboratory testing.</li>
+                <li>We are dedicated to providing all kinds of medical services, including health checkups, sports medicals, and more.</li>
+            </ul>
+            <a href="services.html" class="section-link">Read More About Our Services</a> <!-- Button-style link in content -->
         </div>
 
         <div class="section">
@@ -119,35 +156,11 @@
                 <li><strong>Location:</strong> Kalawewa, Sri Lanka</li>
                 <li><strong>Opening Hours:</strong> 6:45 AM - 7:45 AM (Morning), 6:00 PM - 10:00 PM (Evening)</li>
             </ul>
-        </div>
-
-        <div class="section">
-            <h2>Our Services</h2>
-            <p>We offer a wide variety of healthcare services to meet your needs, including:</p>
-            <ul>
-                <li>General Consultations</li>
-                <li>Minor Surgery Procedures</li>
-                <li>Laboratory Tests</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Book an Appointment</h2>
-            <form action="/book-appointment" method="POST">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="contact">Contact Number:</label>
-                <input type="text" id="contact" name="contact" required><br><br>
-
-                <label for="date">Preferred Appointment Date:</label>
-                <input type="date" id="date" name="date" required><br><br>
-
-                <label for="time">Preferred Appointment Time:</label>
-                <input type="time" id="time" name="time" required><br><br>
-
-                <button type="submit">Submit Appointment</button>
-            </form>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.8145896371674!2d80.53262631414989!3d8.02432209331266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3a54620f5d5f7%3A0x8e0ad0bf3b4cbe31!2sKalawewa%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk" 
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </div>
 
@@ -157,4 +170,3 @@
 
 </body>
 </html>
-
