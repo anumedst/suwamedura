@@ -3,169 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suwa Medura Kalawewa</title>
+    <title>Suwa Medura Medical Centre - Kalawewa</title>
     <style>
-        /* Base styles for body */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #eaf7ff;
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
             color: #333;
         }
 
-        /* Header style */
+        /* Header */
         header {
-            background-color: #6a1b9a;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid #d500f9;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        /* Link to other page in header */
-        .header-link {
-            display: block;
-            color: #ffe082;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        /* Main content style */
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-            justify-content: space-around;
-        }
-
-        /* Style for each section */
-        .section {
-            flex: 1;
-            margin: 15px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            min-width: 250px;
-            border-top: 5px solid #00c853;
-        }
-
-        .section h2 {
-            color: #00897b;
-        }
-
-        .contact-info {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .contact-info li {
-            margin-bottom: 10px;
-        }
-
-        /* Button style for link within content */
-        .section-link {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #6a1b9a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        /* Footer style */
-        footer {
-            background-color: #00897b;
+            background-color: #4CAF50; /* Green */
             color: white;
-            padding: 15px;
             text-align: center;
-            position: relative;
-            width: 100%;
+            padding: 20px;
         }
 
-        footer a {
-            color: #e1bee7;
-            text-decoration: none;
+        /* Container for main content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* Responsive design for mobile screens */
-        @media screen and (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-                align-items: center;
+        /* Info Section */
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-box {
+            background-color: #e8f4ff;
+            border-left: 5px solid #007BFF; /* Blue */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #FF6F61; /* Red */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 600px) {
+            .services {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
             }
 
-            .section {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-
-            header h1 {
-                font-size: 28px;
-            }
-
-            .section h2 {
-                font-size: 20px;
-            }
-
-            footer {
-                font-size: 14px;
+            .service-box {
+                width: 48%; /* Two services per row on larger screens */
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Suwa Medura Kalawewa</h1>
-        <p>We are 2017 January onward</p>
-        <a href="services.html" class="header-link">Learn More About Our Services</a> <!-- Link in header -->
+        <h1>Suwa Medura Medical Centre - Kalawewa</h1>
+        <p>Your trusted medical center since January 2017</p>
     </header>
 
-    <div class="main-content">
-        <div class="section">
+    <!-- Main Content Section -->
+    <div class="container">
+        <section class="info">
             <h2>About Us</h2>
-            <ul>
-                <li>Suwa Medura Kalawewa is a private medical center located in Kalawewa.</li>
-                <li>We provide comprehensive healthcare services for our community.</li>
-                <li>Our center operates every day, including holidays.</li>
-                <li>Our hours are 6:45 AM - 7:45 AM in the morning and 6:00 PM - 10:00 PM in the evening.</li>
-                <li>We offer general medical services, minor surgeries, and laboratory testing.</li>
-                <li>We are dedicated to providing all kinds of medical services, including health checkups, sports medicals, and more.</li>
-            </ul>
-            <a href="services.html" class="section-link">Read More About Our Services</a> <!-- Button-style link in content -->
-        </div>
+            <p>Providing general practice, mini surgery, and laboratory services with experienced medical professionals.</p>
+            <p><strong>Opening Hours:</strong><br>Every day<br>Morning: 7:00 AM - 7:45 AM<br>Evening: 6:00 PM - 10:00 PM</p>
+        </section>
 
-        <div class="section">
-            <h2>Contact Details</h2>
-            <ul class="contact-info">
-                <li><strong>Phone Number:</strong> 0704327291</li>
-                <li><strong>Email:</strong> anumedst@gmail.com</li>
-                <li><strong>Location:</strong> Kalawewa, Sri Lanka</li>
-                <li><strong>Opening Hours:</strong> 6:45 AM - 7:45 AM (Morning), 6:00 PM - 10:00 PM (Evening)</li>
-            </ul>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.8145896371674!2d80.53262631414989!3d8.02432209331266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3a54620f5d5f7%3A0x8e0ad0bf3b4cbe31!2sKalawewa%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk" 
-                    allowfullscreen="" loading="lazy"></iframe>
+        <!-- Services Section -->
+        <section class="services">
+            <div class="service-box">
+                <h3>General Practice</h3>
+                <p>Comprehensive primary care for all ages, ensuring top-quality health management.</p>
             </div>
-        </div>
+            <div class="service-box">
+                <h3>Mini Surgery</h3>
+                <p>Safe minor procedures with expert care, right here at the dispensary.</p>
+            </div>
+            <div class="service-box">
+                <h3>Laboratory Services</h3>
+                <p>Quick, reliable diagnostics for accurate health assessments.</p>
+            </div>
+        </section>
     </div>
 
-    <footer>
-        <p>Suwa Medura Kalawewa | <a href="mailto:anumedst@gmail.com">Email Us</a> | Phone: 0704327291</p>
+    <!-- Contact Section -->
+    <footer class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: <a href="tel:+94704327291" style="color:white;">070-4327291</a></p>
+        <p>WhatsApp Available</p>
+        <p>Suwa Medura Medical Centre, Kalawewa</p>
     </footer>
 
 </body>
